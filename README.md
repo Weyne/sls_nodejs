@@ -31,57 +31,34 @@ Este endpoint primero busca en la tabla Personas (DynamoDB), en caso no exista l
 Request:
 
 ```
-URI/personas/1
+URI/personas/50
 ```
 
 Response:
 
 ```
 {
-    "id": 1,
-    "nombre": "Luke Skywalker",
-    "altura": "172",
-    "masa": "77",
-    "color_pelo": "blond",
-    "color_piel": "fair",
-    "color_ojo": "blue",
-    "anio_nacimiento": "19BBY",
-    "genero": "male",
-    "mundo_natal": "http://swapi.dev/api/planets/1/",
+    "id": 50,
+    "nombre": "Ben Quadinaros", 
+    "altura": "163", 
+    "masa": "65",
+    "color_pelo": "none", 
+    "color_piel": "grey, green, yellow", 
+    "color_ojo": "orange", 
+    "anio_nacimiento": "unknown", 
+    "genero": "male", 
+    "mundo_natal": "http://swapi.dev/api/planets/41/", 
     "peliculas": [
-        {
-            "S": "http://swapi.dev/api/films/1/"
-        },
-        {
-            "S": "http://swapi.dev/api/films/2/"
-        },
-        {
-            "S": "http://swapi.dev/api/films/3/"
-        },
-        {
-            "S": "http://swapi.dev/api/films/6/"
-        }
-    ],
-    "especies": [],
-    "vehiculos": [
-        {
-            "S": "http://swapi.dev/api/vehicles/14/"
-        },
-        {
-            "S": "http://swapi.dev/api/vehicles/30/"
-        }
-    ],
-    "naves_estelares": [
-        {
-            "S": "http://swapi.dev/api/starships/12/"
-        },
-        {
-            "S": "http://swapi.dev/api/starships/22/"
-        }
-    ],
-    "creado": "2014-12-09T13:50:51.644000Z",
-    "editado": "2014-12-20T21:17:56.891000Z",
-    "url": "http://swapi.dev/api/people/1/"
+        "http://swapi.dev/api/films/4/"
+    ], 
+    "especies": [
+        "http://swapi.dev/api/species/19/"
+    ], 
+    "vehiculos": [], 
+    "naves_estelares": [],
+    "creado": "2014-12-20T10:08:33.777000Z", 
+    "editado": "2014-12-20T21:17:50.417000Z", 
+    "url": "http://swapi.dev/api/people/50/"
 }
 ```
 ## Agregar Persona

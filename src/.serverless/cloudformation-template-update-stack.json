@@ -189,7 +189,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/WEYNE-SERVICE/dev/1619728947881-2021-04-29T20:42:27.881Z/getPerson.zip"
+          "S3Key": "serverless/WEYNE-SERVICE/dev/1619730152313-2021-04-29T21:02:32.313Z/getPerson.zip"
         },
         "Handler": "handler_getPerson.getPerson",
         "Runtime": "nodejs12.x",
@@ -219,7 +219,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/WEYNE-SERVICE/dev/1619728947881-2021-04-29T20:42:27.881Z/addPerson.zip"
+          "S3Key": "serverless/WEYNE-SERVICE/dev/1619730152313-2021-04-29T21:02:32.313Z/addPerson.zip"
         },
         "Handler": "handler_addPerson.addPerson",
         "Runtime": "nodejs12.x",
@@ -247,14 +247,14 @@
         "CodeSha256": "5BpJK6OwRdqVpGSyhhHAQKR2imGYtljdqaZz2ycnJXg="
       }
     },
-    "GetPersonLambdaVersionQxysyzsucT9acBxEAu1dIR7ZlATf1BqnrEtXtYdE": {
+    "GetPersonLambdaVersionG6hDEiUYj2C62C3mCgIlIrFCnwzRWPkAJSRjwh4dg": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetPersonLambdaFunction"
         },
-        "CodeSha256": "fn84cwzgLcwEmEslF7EtGStAV/PP6Xt1MP1NpR7oo5U="
+        "CodeSha256": "AadTYC3HqSPt6vwQVBIM47y8S/CI7V5HEMtIjtzkfew="
       }
     },
     "ApiGatewayRestApi": {
@@ -552,7 +552,7 @@
         }
       }
     },
-    "ApiGatewayDeployment1619728943806": {
+    "ApiGatewayDeployment1619730150129": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -707,7 +707,7 @@
     "GetPersonLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetPersonLambdaVersionQxysyzsucT9acBxEAu1dIR7ZlATf1BqnrEtXtYdE"
+        "Ref": "GetPersonLambdaVersionG6hDEiUYj2C62C3mCgIlIrFCnwzRWPkAJSRjwh4dg"
       },
       "Export": {
         "Name": "sls-WEYNE-SERVICE-dev-GetPersonLambdaFunctionQualifiedArn"

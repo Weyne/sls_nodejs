@@ -19,18 +19,10 @@ async function getDataFromSwapi(personId) {
         anio_nacimiento: data.birth_year,
         genero: data.gender,
         mundo_natal: data.homeworld,
-        peliculas: data.films.map((x) => {
-          return { S: x.toString() };
-        }),
-        especies: data.species.map((x) => {
-          return { S: x.toString() };
-        }),
-        vehiculos: data.vehicles.map((x) => {
-          return { S: x.toString() };
-        }),
-        naves_estelares: data.starships.map((x) => {
-          return { S: x.toString() };
-        }),
+        peliculas: data.films,
+        especies: data.species,
+        vehiculos: data.vehicles,
+        naves_estelares: data.starships,
         creado: data.created,
         editado: data.edited,
         url: data.url,
