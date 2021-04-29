@@ -1,0 +1,5 @@
+swapi:
+  compatibleRuntimes:
+    - nodejs12.x
+  package:
+    artifact: modules/nodejs.zip

@@ -1,0 +1,51 @@
+service: WEYNE-SERVICE
+frameworkVersion: "2"
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "dynamodb:*"
+      Resource: "*"
+package:
+  individually: true
+  patterns:
+    - "!modules/**" #el simbolo ! indica que se va excluir en la carga del lambda
+    - "!resources/**"
+    - "!schemas/**"
+    - "!handler_getPerson.js"
+    - "!handler_addPerson.js"
+functions:
+  getPerson:
+    handler: handler_getPerson.getPerson
+    package:
+      patterns:
+        - handler_getPerson.js
+    layers:
+      - { Ref: SwapiLambdaLayer }
+    events:
+      - http:
+          path: personas/{id}
+          method: get
+          cors:
+            origin: "*"
+            allowCredentials: false
+  addPerson:
+    handler: handler_addPerson.addPerson
+    package:
+      patterns:
+        - handler_addPerson.js
+    events:
+      - http:
+          path: personas/crear
+          method: post
+          request:
+            schemas:
+              application/json: ${file(schemas/create_person.json)}
+
+layers: ${file(resources/swapi-layer.yml)}
+resources:
+  - ${file(resources/dynamo-table.yml)}

@@ -1,0 +1,73 @@
+{
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "The Root Schema",
+    "required": ["id","nombre","altura","masa","color_pelo","color_piel","color_ojo","anio_nacimiento","genero","mundo_natal","url"],
+    "properties": {
+      "id": {
+        "type": "number",
+        "pattern": "^[a-zA-Z0-9]+$"
+      },
+      "nombre": {
+        "type": "string"
+      },
+      "altura": {
+        "type": "string"
+      },
+      "masa": {
+        "type": "string"
+      },
+      "color_pelo": {
+        "type": "string"
+      },
+      "color_piel": {
+        "type": "string"
+      },
+      "color_ojo": {
+        "type": "string"
+      },
+      "anio_nacimiento": {
+        "type": "string"
+      },
+      "genero": {
+        "type": "string"
+      },
+      "mundo_natal": {
+        "type": "string"
+      },
+      "peliculas": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "especies": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "vehiculos": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "naves_estelares": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "creado": {
+        "type": "string"
+      },
+      "editado": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string"
+      }
+    }
+  }
